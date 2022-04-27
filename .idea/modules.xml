@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Builder.iml" filepath="$PROJECT_DIR$/.idea/Builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/design.patterns.go.iml" filepath="$PROJECT_DIR$/.idea/design.patterns.go.iml" />
     </modules>
   </component>
 </project>
