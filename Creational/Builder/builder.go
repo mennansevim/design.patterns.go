@@ -47,11 +47,11 @@ func (nb *NotificationBuilder) SetNoteType(noteType string) {
 func (nb *NotificationBuilder) Build() (*Notification, error) {
 
 	if nb.Icon != "" && nb.SubTitle == "" {
-		return nil, fmt.Errorf("you need to specify a subtitle when using an icon")
+		return nil, fmt.Errorf("icon kullanacaksanız geçerli bir subTitle girmelisin")
 	}
 
 	if nb.Priority > 5 {
-		return nil, fmt.Errorf("priority must be 0 - 5")
+		return nil, fmt.Errorf("Öncelik 0 - 5 arasında olmalı")
 	}
 
 	return &Notification{

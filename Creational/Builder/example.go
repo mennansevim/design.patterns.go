@@ -7,6 +7,7 @@ func main() {
 	var builder = newNotificationBuilder()
 
 	builder.SetTitle("Uyarı")
+	builder.SetSubTitle("SubTitle")
 	builder.SetIcon("icon.png")
 	builder.SetImage("image.jpg")
 	builder.SetPriority(1)
@@ -18,6 +19,6 @@ func main() {
 	if err != nil {
 		fmt.Println("Error creating the noty:", err)
 	} else {
-		fmt.Println("Notification: %+v", notif)
+		fmt.Printf("Notification: %+v", notif)
 	}
 }
