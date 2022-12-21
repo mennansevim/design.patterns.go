@@ -16,11 +16,11 @@ func main() {
 	log.SetLogLevel(3)
 	log.Log("This is a log message")
 
-	create several goroutines that try to get the
-	logger instance concurrently
+	// create several goroutines that try to get the
+	// logger instance concurrently
 	for i := 1; i < 10; i++ {
 		go getLoggerInstance()
 	}
-	wait for input before exiting
+	// wait for input before exiting
 	fmt.Scanln()
 }

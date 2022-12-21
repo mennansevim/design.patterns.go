@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-BookType represents the type of book
+// BookType represents the type of book
 type BookType int
 
-Predefined Book types
+// Predefined Book types
 const (
 	HardCover BookType = iota
 	SoftCover
@@ -13,7 +13,7 @@ const (
 	EBook
 )
 
-Book represents data about a book
+// Book represents data about a book
 type Book struct {
 	Name      string
 	Author    string
@@ -21,13 +21,13 @@ type Book struct {
 	Type      BookType
 }
 
-Library holds the collection of books
+// Library holds the collection of books
 type Library struct {
 	Collection []Book
 }
 
-IterateBooks calls the given callback function 
-for each book in the collection
+// IterateBooks calls the given callback function
+// for each book in the collection
 func (l *Library) IterateBooks(f func(Book) error) {
 	var err error
 	for _, b := range l.Collection {
@@ -39,16 +39,16 @@ func (l *Library) IterateBooks(f func(Book) error) {
 	}
 }
 
-createIterator returns a BookIterator that can access the book
-collection on demand
+// createIterator returns a BookIterator that can access the book
+// collection on demand
 func (l *Library) createIterator() iterator {
 	return &BookIterator{
 		books: l.Collection,
 	}
 }
 
--------------------
-Create a Library structure to hold a set of Books
+// -------------------
+// Create a Library structure to hold a set of Books
 var lib *Library = &Library{
 	Collection: []Book{
 		{

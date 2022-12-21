@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	Create instances of the two TV types with some default values
+	// Create instances of the two TV types with some default values
 	tv1 := &SammysangTV{
 		currentChan:   13,
 		currentVolume: 35,
@@ -15,7 +15,7 @@ func main() {
 		isOn:    true,
 	}
 
-	Because the SohneeTV implements the "television" interface, we don't need an adapter
+	// Because the SohneeTV implements the "television" interface, we don't need an adapter
 	tv2.turnOn()
 	tv2.volumeUp()
 	tv2.volumeDown()
@@ -26,8 +26,8 @@ func main() {
 
 	fmt.Println("--------------------")
 
-	We need to create a SammysangTV adapter for the SammysangTV class, however
-	because it has an interface that's different from the one we want to use
+	// We need to create a SammysangTV adapter for the SammysangTV class, however
+	// because it has an interface that's different from the one we want to use
 	ssAdapt := &sammysangAdapter{
 		sstv: tv1,
 	}

@@ -2,14 +2,14 @@ package main
 
 import "fmt"
 
-The CoffeeMachine struct represents an API to a hypothetical coffee maker
+// The CoffeeMachine struct represents an API to a hypothetical coffee maker
 type CoffeeMachine struct {
-	beanAmount   float32 amount in ounces of beans to use
-	grinderLevel int     the granularity of the bean grinder
-	waterTemp    int     temperature of the water to use
-	waterAmt     float32 amount of water to use
-	milkAmount   float32 amount of milk to use
-	addFoam      bool    whether to add foam or not
+	beanAmount   float32 // amount in ounces of beans to use
+	grinderLevel int     // the granularity of the bean grinder
+	waterTemp    int     // temperature of the water to use
+	waterAmt     float32 // amount of water to use
+	milkAmount   float32 // amount of milk to use
+	addFoam      bool    // whether to add foam or not
 }
 
 func (c *CoffeeMachine) startCoffee(beanAmount float32, grind int) {

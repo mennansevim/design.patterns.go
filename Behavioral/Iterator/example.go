@@ -2,18 +2,18 @@ package main
 
 import "fmt"
 
-Iterate using a callback function
+// Iterate using a callback function
 func main() {
-	use IterateBooks to iterate via a callback function
+	// use IterateBooks to iterate via a callback function
 	lib.IterateBooks(myBookCallback)
 
-	Use IterateBooks to iterate via anonymous function
+	// Use IterateBooks to iterate via anonymous function
 	lib.IterateBooks(func(b Book) error {
 		fmt.Println("Book author:", b.Author)
 		return nil
 	})
 
-	create a BookIterator
+	// create a BookIterator
 	iter := lib.createIterator()
 	for iter.hasNext() {
 		book := iter.next()
@@ -21,7 +21,7 @@ func main() {
 	}
 }
 
-This callback function processes an individual Book object
+// This callback function processes an individual Book object
 func myBookCallback(b Book) error {
 	fmt.Println("Book title:", b.Name)
 	return nil
